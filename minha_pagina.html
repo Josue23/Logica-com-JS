@@ -103,9 +103,17 @@
 		pulaLinha();
 
 		// =========================================================
-		document.write("<hr><strong>Capítulo 2.7</strong><br>Pare de escrever BR tantas vezes!");
+		document.write("<hr><strong>Capítulo 2.9</strong><br>Funções passando informações e chamando outras funções");
 		pulaLinha();
 		pulaLinha();
+
+		var mostra = function(frase) {
+			document.write(frase );
+			pulaLinha();
+			document.write("<hr>");
+		};
+		mostra("Usando funções para melhorar o código.");
+
 
 
 	</script>
