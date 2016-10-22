@@ -7,41 +7,105 @@
 </head>
 <body>
 	<script>
-		document.write("25 string<br>");
-		document.write(25 + ' inteiro<br>');
+		// variável pulaLinha qua armazena a  função que pula uma linha
+		var pulaLinha = function() {
+			document.write("<br>");
+		};
+
+		document.write("25 string");
+		pulaLinha();
+		
+		document.write(25 + ' inteiro');
+		pulaLinha();
+
 		document.write(' 25 + 25 = ' + (25 + 25) + ' "soma os inteiros."'); 
-		document.write("<br>25" + "25" + ' \"25\" + \"25\" concatena as strings.<br><br>');
+		document.write("<br>25" + "25" + ' \"25\" + \"25\" concatena as strings.');
+		pulaLinha();
+		pulaLinha();
 
 		var ano = 2012;
 		document.write("Eu nasci em: ");
 		document.write(ano - 38);
-		document.write("<br>2016 - 38<br><br>");
+		document.write("<br>2016 - 38");
+		pulaLinha();
+		pulaLinha();
 
 		document.write("A soma das idades é: 25 + 32 + 26 = ");
 		document.write(25 + 32 + 26);
+		pulaLinha();
+		pulaLinha();
 
-		document.write("<br><br>A média das idades é: 25 + 32 + 26 = ");
+		document.write("A média das idades é: 25 + 32 + 26 = ");
 		document.write((25 + 32 + 26) / 3);
+		pulaLinha();
+		pulaLinha();
 
-		document.write("<br><br>Minha idade é " + 25 + ' anos.<br><br>');
+		document.write("Minha idade é " + 25 + ' anos.');
+		pulaLinha();
+		pulaLinha();
 
-		document.write("Nossa diferença de idade é " + (37 - 8) + '<br><br>');
+		document.write("Nossa diferença de idade é " + (37 - 8));
+		pulaLinha();
+		pulaLinha();
 
-		document.write("Já se passaram " + ano / 28 + " gerações desde o ano zero.<br><br>");
+		document.write("Já se passaram " + ano / 28 + " gerações desde o ano zero.");
+		pulaLinha();
+		pulaLinha();
+
+		// =========================================================
+		document.write("<hr><strong>Capítulo 2.6</strong><br>Revisando o seu código: organize-se com variáveis");
+		pulaLinha();
+		pulaLinha();
 
 		var eu = 25;
 		var adriano = 26;
 		var paulo = 32;
 		var total = eu + adriano + paulo;
-		document.write("A soma das idades é " + total + '<br><br>');
+		document.write("A soma das idades é " + total);
+		pulaLinha();
+		pulaLinha();
 
-		document.write("Eu nasci em " + (ano - 38) + '<br>');
-		document.write("Adriano nasceu em " + (ano - 30) + '<br>');
-		document.write("Paulo nasceu em " + (ano - 32) + '<br><br>');
+		document.write("Eu nasci em " + (ano - 38));
+		pulaLinha();
+		document.write("Adriano nasceu em " + (ano - 30));
+		pulaLinha();
+		document.write("Paulo nasceu em " + (ano - 32));
+		pulaLinha();
 
 		var media = total / 3;
-		document.write("A média das nossas idades é " + Math.round(media) + '<br><br>');
+		document.write("A média 'arredondada' das nossas idades é " + Math.round(media));
+		pulaLinha();
+		document.write("A média 'arredondada com duas casa decimais' das nossas idades é " + media.toFixed(2));
+		pulaLinha();
+		pulaLinha();
 
+		// cálculo de consumo de gasolina
+		var tanque = 40;
+		var distanciaComGasolina = 480;
+		var consumoDeGasolina = distanciaComGasolina / tanque;
+		var precoGasolina = 2.9;
+		var precoPorKilometroGasolina = precoGasolina / consumoDeGasolina;
+		document.write('Consome ' + consumoDeGasolina + ' litros de gasolina por KM.<br><br>');
+		document.write("Valor gasto por kilometro utilizando gasolina é R$ " + precoPorKilometroGasolina.toFixed(3) + '<hr>');
+
+
+		// cálculo de consumo de álcool
+		var distanciaComAlcool = 300;
+		var consumoDeAlcool = distanciaComAlcool / tanque; // consumo de álcool por km rodado
+		var precoAlcool = 2.4;
+		var precoPorKilometroAlcool = precoAlcool / consumoDeAlcool;
+		document.write('Consome ' + consumoDeAlcool + ' litros de álcool por KM.');
+		pulaLinha();
+		pulaLinha();
+
+		document.write("Valor gasto por kilometro utilizando álcool  é R$ " + precoPorKilometroAlcool.toFixed(3));
+		pulaLinha();
+		pulaLinha();
+
+		// =========================================================
+		document.write("<hr><strong>Capítulo 2.7</strong><br>Pare de escrever BR tantas vezes!");
+		pulaLinha();
+		pulaLinha();
 
 
 	</script>
