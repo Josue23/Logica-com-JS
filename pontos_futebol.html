@@ -32,18 +32,60 @@
 		};
 
 		// recebe o número de vitórias, empates e derrotas do nosso time
+		// recebe o número de vitórias do nosso time e valida o tipo inteiro
 		var vitorias = prompt("Quantos jogos o nosso time venceu? ");
+		while (vitorias != parseInt(vitorias)) {
+			alert("Por favor, digite um número válido!");
+			var vitorias = prompt("Quantos jogos o nosso time venceu? ");
+		};
+
+		// recebe o número de empates do nosso time e valida o tipo inteiro
 		var empates = prompt("Quantos jogos o nosso time empatou? ");
+		while (empates != parseInt(empates)) {
+			alert("Por favor, digite um número válido!");
+			var empates = prompt("Quantos jogos o nosso time empatou? ");
+		};
+
+		// recebe o número de derrotas do nosso time e valida o tipo inteiro
 		var derrotas = prompt("Quantos jogos o nosso time perdeu? ");
+		while (derrotas != parseInt(derrotas)) {
+			alert("Por favor, digite um número válido!");
+			var derrotas = prompt("Quantos jogos o nosso time perdeu? ");
+		};
+		
+		
+		// valida as variáveis no tipo inteiro
 		vitorias = parseInt(vitorias);
 		empates = parseInt(empates);
+		
 
 		// recebe o número de vitórias, empates e derrotas do time adversário
+		// recebe o número de vitórias do time time adversário e valida o tipo inteiro
 		var vitoriasAdversario = prompt("Quantos jogos o time adversário venceu? ");
+		while (vitoriasAdversario != parseInt(vitoriasAdversario)) {
+			alert("Por favor, digite um número válido!");
+			var vitoriasAdversario = prompt("Quantos jogos o time adversário venceu? ");
+		};
+
+		// recebe o número de empates do time time adversário e valida o tipo inteiro
 		var empatesAdversario = prompt("Quantos jogos o time adversário empatou? ");
+		while (empatesAdversario != parseInt(empatesAdversario)) {
+			alert("Por favor, digite um número válido!");
+		var empatesAdversario = prompt("Quantos jogos o time adversário empatou? ");
+		};
+
+		// recebe o número de derrotas do time time adversário e valida o tipo inteiro
 		var derrotasAdversario = prompt("Quantos jogos o time adversário perdeu? ");
+		while (derrotasAdversario != parseInt(derrotasAdversario)) {
+			alert("Por favor, digite um número válido!");
+			var derrotasAdversario = prompt("Quantos jogos o time adversário perdeu? ");
+		};
+
+		
+		// valida as variáveis no tipo inteiro
 		vitoriasAdversario = parseInt(vitoriasAdversario);
 		empatesAdversario = parseInt(empatesAdversario);
+
 
 		// calcula se o nosso time tem mais pontos, menos pontos ou está empatado
 		if (calculaPontos(vitorias, empates) > calculaPontosAdversario(vitoriasAdversario, empatesAdversario)) {
@@ -52,6 +94,7 @@
 		if (calculaPontos(vitorias, empates) < calculaPontosAdversario(vitoriasAdversario, empatesAdversario)) {
 			mostra("Nosso time está indo pior que o Livros Velhos.");	
 		};
+
 		if (calculaPontos(vitorias, empates) == calculaPontosAdversario(vitoriasAdversario, empatesAdversario)) {
 			mostra("Nosso time está empatado com o Livros Velhos.");
 		};
