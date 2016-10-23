@@ -7,22 +7,75 @@
 	<script>
 		// variável pulaLinha qua armazena a  função que pula uma linha
 		var pulaLinha = function() {
-			document.write("<br>");
+			document.write("<br><hr>");
 		};
 
 		var mostra = function(frase) {
 			document.write(frase );
 			pulaLinha();
-			document.write("<hr>");
 		};
 
-		var vitorias = prompt("Quantos jogos o time venceu? ");
-		var empates = prompt("Quantos jogos o time empatou? ");
-		var pontos = (parseInt(vitorias) * 3) + parseInt(empates);
+		/* Regras:
+			vitoria = 3 pontos
+			empate = 1 ponto
+			derrota = -1 ponto
+		*/
 
-		mostra("Nosso time tem " + parseInt(pontos) + " pontos.");
+		// função que  retorna o total de pontos do nosso time
+		var calculaPontos = function(vitorias, empates) {
+			return (vitorias * 3) + empates + (- derrotas);
+		};
+
+		// função que  retorna o total de pontos do time adversário
+		var calculaPontosAdversario = function(vitoriasAdversario, empatesAdversario) {
+			return (vitoriasAdversario * 3) + empatesAdversario + (- derrotasAdversario);
+		};
+
+		// recebe o número de vitórias, empates e derrotas do nosso time
+		var vitorias = prompt("Quantos jogos o nosso time venceu? ");
+		var empates = prompt("Quantos jogos o nosso time empatou? ");
+		var derrotas = prompt("Quantos jogos o nosso time perdeu? ");
+		vitorias = parseInt(vitorias);
+		empates = parseInt(empates);
+
+		// recebe o número de vitórias, empates e derrotas do time adversário
+		var vitoriasAdversario = prompt("Quantos jogos o time adversário venceu? ");
+		var empatesAdversario = prompt("Quantos jogos o time adversário empatou? ");
+		var derrotasAdversario = prompt("Quantos jogos o time adversário perdeu? ");
+		vitoriasAdversario = parseInt(vitoriasAdversario);
+		empatesAdversario = parseInt(empatesAdversario);
+
+		// calcula se o nosso time tem mais pontos, menos pontos ou está empatado
+		if (calculaPontos(vitorias, empates) > calculaPontosAdversario(vitoriasAdversario, empatesAdversario)) {
+			mostra("Nosso time está indo melhor que o Livros Velhos.");
+		};
+		if (calculaPontos(vitorias, empates) < calculaPontosAdversario(vitoriasAdversario, empatesAdversario)) {
+			mostra("Nosso time está indo pior que o Livros Velhos.");	
+		};
+		if (calculaPontos(vitorias, empates) == calculaPontosAdversario(vitoriasAdversario, empatesAdversario)) {
+			mostra("Nosso time está empatado com o Livros Velhos.");
+		};
+
+		// exibe a quantidade de pontos do nosso time
+		mostra("Nosso time tem " + calculaPontos(vitorias, empates) + " pontos.");
+
+		// exibe a quantidade de pontos do time adversário
+		mostra("O time adversário tem " + calculaPontosAdversario(vitoriasAdversario, empatesAdversario) + " pontos.");
 
 	</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
+
+
+
+
+
+
