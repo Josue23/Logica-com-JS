@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Cálculo de dados vitais de uma pessoa</title>
+</head>
+<body>
+	<script>
+		var idade = prompt("Informe sua idade: ");
+		// var dias = idade * 365;
+
+		var calculaDiasDeVida = function() {
+			return idade * 365;
+		};
+		var dias = calculaDiasDeVida(idade);
+
+		// The toLocaleString() method returns a string with a language sensitive representation of this number.
+		document.write("Você tem " + dias.toLocaleString() + " dias de vida.<br>");
+
+		var calculaBatimemtos = function() {
+			return dias * 24 * 60 * 80;
+			calculaDiasDeVida();
+		};
+
+		var batCardiaco = calculaDiasDeVida(calculaBatimemtos(idade));
+		document.write("Seu coração já bateu " + batCardiaco.toLocaleString() + " vezes em " + idade + " anos.");
+	</script>
+
+</body>
+</html>

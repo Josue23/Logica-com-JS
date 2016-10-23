@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Calcula o Índice de Massa Corporal, o IMC</title>
+</head>
+<body>
+	<script >
+	var pulaLinha = function() {
+		document.write("<br><hr><br>");
+	};
+
+	var mostra = function(peso, altura) {
+		document.write(peso, altura);
+		pulaLinha();
+	};
+
+	var calculaIMC  = function(peso, altura) {
+		var imc = peso / (altura * altura);
+		return imc;
+	};
+
+	var nome = prompt("Informe seu nome: ");
+	var peso = prompt(nome + ", informe seu peso: ");
+	var altura = prompt(nome + ", informe sua altura: ");
+	var imcDoUsuario = calculaIMC(peso, altura).toFixed(2);
+
+	mostra(nome + ", o seu IMC é " + imcDoUsuario + " e você está " + (35 - imcDoUsuario).toFixed(2) + " distante da obesidade severa.");
+
+	</script>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
