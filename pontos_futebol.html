@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head><meta charset="utf-8">
+	<title></title>
+</head>
+<body>
+	<script>
+		// variável pulaLinha qua armazena a  função que pula uma linha
+		var pulaLinha = function() {
+			document.write("<br>");
+		};
+
+		var mostra = function(frase) {
+			document.write(frase );
+			pulaLinha();
+			document.write("<hr>");
+		};
+
+		var vitorias = prompt("Quantos jogos o time venceu? ");
+		var empates = prompt("Quantos jogos o time empatou? ");
+		var pontos = (parseInt(vitorias) * 3) + parseInt(empates);
+
+		mostra("Nosso time tem " + parseInt(pontos) + " pontos.");
+
+	</script>
+
+</body>
+</html>
