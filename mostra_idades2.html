@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Revisão do código: usando a função mostra</title>
+</head>
+<body>
+	<script >
+		var pulaLinha = function() {
+			document.write("<br><hr><br>");
+		};
+
+		var frase = "Frase que vai ser escrita na tela com a função mostra.";
+
+		// esta função mostra uma frase no navegador e pula duas linhas
+		var mostra = function(frase) {
+			document.write(frase);
+			pulaLinha();
+		};
+
+		mostra(frase);
+
+		var ano = 2012;
+
+		mostra("Eu nasci em " + (ano - 25) + '.');
+		mostra("Adriano nasceu em " + (ano - 26) + '.');
+		mostra("Paulo nasceu em " + (ano - 32) + '.');
+
+		console.log("Esta mensagem aparece somente no log.");
+
+
+	</script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
