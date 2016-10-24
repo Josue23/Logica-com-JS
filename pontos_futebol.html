@@ -34,24 +34,30 @@
 		// recebe o número de vitórias, empates e derrotas do nosso time
 		// recebe o número de vitórias do nosso time e valida o tipo inteiro
 		var vitorias = prompt("Quantos jogos o nosso time venceu? ");
-		while (vitorias != parseInt(vitorias)) {
+		while (vitorias != parseInt(vitorias)) {    // validando com JS
 			alert("Por favor, digite um número válido!");
 			var vitorias = prompt("Quantos jogos o nosso time venceu? ");
 		};
+		// Remove tudo que não seja número e usa o método .replace() do JS
+		vitorias = ( vitorias.replace(/[^\d]+/g,'') );   // validando com Regex
 
 		// recebe o número de empates do nosso time e valida o tipo inteiro
 		var empates = prompt("Quantos jogos o nosso time empatou? ");
-		while (empates != parseInt(empates)) {
+		while (empates != parseInt(empates)) {            // validando com JS
 			alert("Por favor, digite um número válido!");
 			var empates = prompt("Quantos jogos o nosso time empatou? ");
 		};
+		// Remove tudo que não seja número e usa o método .replace() do JS
+		empates = ( empates.replace(/[^\d]+/g,'') );   // validando com Regex
 
 		// recebe o número de derrotas do nosso time e valida o tipo inteiro
 		var derrotas = prompt("Quantos jogos o nosso time perdeu? ");
-		while (derrotas != parseInt(derrotas)) {
+		while (derrotas != parseInt(derrotas)) {    // validando com JS
 			alert("Por favor, digite um número válido!");
 			var derrotas = prompt("Quantos jogos o nosso time perdeu? ");
 		};
+		// Remove tudo que não seja número e usa o método .replace() do JS
+		derrotas = ( derrotas.replace(/[^\d]+/g,'') );   // validando com Regex
 		
 		
 		// valida as variáveis no tipo inteiro
@@ -62,24 +68,30 @@
 		// recebe o número de vitórias, empates e derrotas do time adversário
 		// recebe o número de vitórias do time time adversário e valida o tipo inteiro
 		var vitoriasAdversario = prompt("Quantos jogos o time adversário venceu? ");
-		while (vitoriasAdversario != parseInt(vitoriasAdversario)) {
+		while (vitoriasAdversario != parseInt(vitoriasAdversario)) {    // validando com JS
 			alert("Por favor, digite um número válido!");
 			var vitoriasAdversario = prompt("Quantos jogos o time adversário venceu? ");
 		};
+		// Remove tudo que não seja número e usa o método .replace() do JS
+		vitoriasAdversario = ( vitoriasAdversario.replace(/[^\d]+/g,'') );   // validando com Regex
 
 		// recebe o número de empates do time time adversário e valida o tipo inteiro
 		var empatesAdversario = prompt("Quantos jogos o time adversário empatou? ");
-		while (empatesAdversario != parseInt(empatesAdversario)) {
+		while (empatesAdversario != parseInt(empatesAdversario)) {    // validando com JS
 			alert("Por favor, digite um número válido!");
 		var empatesAdversario = prompt("Quantos jogos o time adversário empatou? ");
 		};
+		// Remove tudo que não seja número e usa o método .replace() do JS
+		empatesAdversario = ( empatesAdversario.replace(/[^\d]+/g,'') );   // validando com Regex
 
 		// recebe o número de derrotas do time time adversário e valida o tipo inteiro
 		var derrotasAdversario = prompt("Quantos jogos o time adversário perdeu? ");
-		while (derrotasAdversario != parseInt(derrotasAdversario)) {
+		while (derrotasAdversario != parseInt(derrotasAdversario)) {    // validando com JS
 			alert("Por favor, digite um número válido!");
 			var derrotasAdversario = prompt("Quantos jogos o time adversário perdeu? ");
 		};
+		// Remove tudo que não seja número e usa o método .replace() do JS
+		derrotasAdversario = ( derrotasAdversario.replace(/[^\d]+/g,'') );   // validando com Regex
 
 		
 		// valida as variáveis no tipo inteiro
