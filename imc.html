@@ -21,6 +21,7 @@
 	};
 	
 	// http://librosweb.es/libro/javascript/capitulo_7/validacion.html
+	// recebe, valida e armazena o nome do usuário
 	var nome = prompt("Informe seu nome: ");
 	while ( nome == null || nome.length == 0 || /^\s+$/.test(nome) ) {
 		var nome = prompt("Por favor, informe seu nome: ");
@@ -28,23 +29,27 @@
 	// capitalize o nome do usuário
 	nome = nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase();
 
+	// recebe, valida e armazena o peso do usuário
 	var peso = prompt(nome + ", informe seu peso: ");
 	while (peso == null || peso.length == 0 || peso != peso.match(/^\d{0,2}(?:\.\d{0,2}){0,1}$/)) {
 		var peso = prompt(nome + ", por favor informe seu peso: ");
 	};
 
+	// recebe, valida e armazena a altura do usuário
 	var altura = prompt(nome + ", informe sua altura: ");
 	while (altura == null || altura.length == 0 || altura != altura.match(/^\d{0,2}(?:\.\d{0,2}){0,1}$/)) {
 		var altura = prompt(nome + ", por favor informe sua altura: ");
 	};
 
-
+	// calcula o IMC
 	var imcDoUsuario = calculaIMC(peso, altura).toFixed(2);
 
-	mostra(nome.charAt(0).toUpperCase() + nome.slice(1).toLowerCase() + ",<br> o seu IMC é " + imcDoUsuario + " e você está " + (35 - imcDoUsuario).toFixed(2) + " distante da obesidade severa.");
-
+	// exibe o IMC do usuário,
+	mostra(nome + ",<br> o seu IMC é " + imcDoUsuario + " e você está " + (35 - imcDoUsuario).toFixed(2) + " distante da obesidade severa.");
+	
+	// verifica e exibe se o usuário está abaixo do peso
 	if (imcDoUsuario < 18.5) {
-		mostra("Seu IMC indica que você está ABAIXO do peso.");
+		mostra(nome + ", seu IMC indica que você está ABAIXO do peso.");
 	};
 
 	</script>
