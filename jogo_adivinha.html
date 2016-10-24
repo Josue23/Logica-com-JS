@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Adivinhar um número aleatório</title>
+</head>
+<body>
+	<script >
+		var pulaLinha = function() {
+			document.write("<br><hr><br>");
+		};
+
+		var mostra = function(frase) {
+			document.write(frase);
+			pulaLinha();
+		};
+
+
+		var numeroPensado = Math.round(Math.random() * 100);
+		alert(numeroPensado);
+
+		var soma = 0;
+		var guess = prompt("Tente um número: ");
+		// guess = parseInt(guess);
+
+		if (guess == numeroPensado) {
+			mostra("Você acertou! O número é " + numeroPensado);
+		}
+		else {
+			mostra("Você errou! O número é " + numeroPensado);
+		}
+
+		// while (guess != numeroPensado) {
+		// 	if (guess < numeroPensado) {
+		// 		mostra("Dica: tente um número maior.");
+		// 	};
+		// 	if (guess > numeroPensado) { 
+		// 		mostra("Dica: tente um número menor.");
+		// 	};
+		// 	soma += 1;
+
+		// };
+
+	</script>
+
+</body>
+</html>

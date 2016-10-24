@@ -44,12 +44,20 @@
 	// calcula o IMC
 	var imcDoUsuario = calculaIMC(peso, altura).toFixed(2);
 
-	// exibe o IMC do usuário,
-	mostra(nome + ",<br> o seu IMC é " + imcDoUsuario + " e você está " + (35 - imcDoUsuario).toFixed(2) + " distante da obesidade severa.");
+	mostra(nome + ", seu IMC é " + imcDoUsuario);
 	
 	// verifica e exibe se o usuário está abaixo do peso
 	if (imcDoUsuario < 18.5) {
 		mostra(nome + ", seu IMC indica que você está ABAIXO do peso.");
+	};
+
+	// verifica e exibe se o usuário está acima do peso
+	if (imcDoUsuario > 35) {
+		mostra(nome + ", seu IMC indica que você está ACIMA do peso.");
+	};
+
+	if (imcDoUsuario >= 18.5 && imcDoUsuario <= 35) {
+		mostra(nome + ", seu IMC está entre os dois limites.");
 	};
 
 	</script>
