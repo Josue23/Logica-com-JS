@@ -15,33 +15,36 @@
 			pulaLinha();
 		};
 
+		var sorteia = function(numeroPensado, guess) {
+			var numeroPensado = Math.round(Math.random() * 100);
+		}
 
-		var numeroPensado = Math.round(Math.random() * 100);
-		alert(numeroPensado);
-
-		var soma = 0;
+		var numeroPensado = sorteia(100);
 		var guess = prompt("Tente um número: ");
-		// guess = parseInt(guess);
+		guess = parseInt(guess);
 
-		if (guess == numeroPensado) {
-			mostra("Você acertou! O número é " + numeroPensado);
+		sorteia(numeroPensado, guess);
+		if (guess < numeroPensado) {
+			mostra("Dica: tente um número maior.");
 		}
 		else {
-			mostra("Você errou! O número é " + numeroPensado);
+			if (guess > numeroPensado) { 
+			mostra("Dica: tente um número menor.");
+			}
+			else {
+			mostra("Parabéns! Você acertou.");
+			}
 		}
 
-		// while (guess != numeroPensado) {
-		// 	if (guess < numeroPensado) {
-		// 		mostra("Dica: tente um número maior.");
-		// 	};
-		// 	if (guess > numeroPensado) { 
-		// 		mostra("Dica: tente um número menor.");
-		// 	};
-		// 	soma += 1;
-
-		// };
 
 	</script>
 
 </body>
 </html>
+
+
+
+
+
+
+
