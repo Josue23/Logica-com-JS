@@ -5,6 +5,7 @@
 	<title>Adivinhar um número aleatório</title>
 </head>
 <body>
+	<h3>Função que recebe um número do usuário e sorteia um número<br>entre zero e o número que o usuário informou.</h3>
 	<script >
 		var pulaLinha = function() {
 			document.write("<br><hr><br>");
@@ -15,27 +16,25 @@
 			pulaLinha();
 		};
 
-		var sorteia = function(numeroPensado, guess) {
-			var numeroPensado = Math.round(Math.random() * 100);
+		// função que sorteia um número entre 0 e o número que o usuário informou
+		var sorteia = function(guess) {
+			var numeroPensado = Math.round(Math.random() * guess);
+			return numeroPensado;
 		}
 
-		var numeroPensado = sorteia(100);
 		var guess = prompt("Tente um número: ");
-		guess = parseInt(guess);
+		var numeroPensado = sorteia(guess);
+		alert(numeroPensado);
 
-		sorteia(numeroPensado, guess);
-		if (guess < numeroPensado) {
-			mostra("Dica: tente um número maior.");
+		// verifica se o usuário digitou um número
+		if (isNaN(guess)) {
+			mostra("Apenas números são válidos");
+			// alert(guess);
 		}
 		else {
-			if (guess > numeroPensado) { 
-			mostra("Dica: tente um número menor.");
-			}
-			else {
-			mostra("Parabéns! Você acertou.");
-			}
+			guess = parseInt(guess);
+			// alert(guess);
 		}
-
 
 	</script>
 
